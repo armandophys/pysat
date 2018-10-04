@@ -53,7 +53,10 @@ install:
       echo 'PYGLOW_SIZE';
       export CHECK_SIZE="50000";
       if [["$PYGLOW_SIZE" -lt "$CHECK_SIZE"]]; then
-        rm -r ./pyglow;
+        cd ./pyglow;
+        ls;
+        cd ..;
+        rm -r $pyglow_dir;
         echo 'removing pyglow directory';
       fi
     fi
